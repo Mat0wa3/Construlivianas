@@ -249,7 +249,7 @@ header {
         width: 100%;
         height: 100dvh;
         background-color: rgba(44, 62, 80, 0.9);
-        box-shadow: 0 8px 32px 0 rgba(44, 62, 80, 0.4);
+        box-shadow: 0 8px 32px 0 rgba(55, 135, 31, 0.4);
         backdrop-filter: blur( 8px );
         -webkit-backdrop-filter: blur( 8px );
         top: 82px;
@@ -380,7 +380,7 @@ header {
 }
 
 .manual-btn {
-    border: 2px solid #40d3dc;
+    border: 2px solid #37871f;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -392,7 +392,7 @@ header {
 }
 
 .manual-btn:hover {
-    background: #40d3dc;
+    background: #37871f;
 }
 
 #radio1:checked ~ .first {
@@ -422,7 +422,7 @@ header {
 }
 
 .navigation-auto div {
-    border: 2px solid #40d3dc;
+    border: 2px solid #37871f;
     padding: 5px;
     border-radius: 10px;
     transition: 1s;
@@ -433,17 +433,17 @@ header {
 }
 
 #radio1:checked ~ .navigation-auto .auto-btn1 {
-    background: #40d3dc;
+    background: #37871f;
 }
 
 #radio2:checked ~ .navigation-auto .auto-btn2 {
-    background: #40d3dc;
+    background: #37871f;
 }
 
 #radio3:checked ~ .navigation-auto .auto-btn3 {
-    background: #40d3dc;
+    background: #37871f;
 }
 
 #radio4:checked ~ .navigation-auto .auto-btn4 {
-    background: #40d3dc;
+    background: #37871f;
 }

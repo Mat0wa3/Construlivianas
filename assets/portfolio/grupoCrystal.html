@@ -1,59 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Grupo crystal portafolio</title>
-    <link rel="stylesheet" href="../css/styles.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Grupo crystal</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="/assets/css/indexStyles.css">
+    <link rel="stylesheet" href="/assets/css/gallery-grid.css">
+
+
 </head>
 
 <body>
 
-    <main class="sliderContainer">
+    <div class="layout">
 
-        <div class="slider">
-            <div class="slides">
+        <header class="header blur">
 
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
+            <section class="header_nav">
 
-                <div class="slide first">
-                    <img src="../img/grupoCrystal/1.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="../img/grupoCrystal/2.jpeg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="../img/grupoCrystal/3.jpeg" alt="">
-                </div>
+                <a href="/" class="header_icon">
+                    <!-- <img src="/assets/img/Logo_dark.svg" alt=""> -->
+                    <p>RPGCONSTRULIVIANAS<span>.</span></p>
+                </a>
 
-                <div class="navigation-auto">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
+                <input id="check" type="checkbox">
+                <label for="check" class="checkbtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 6l16 0" />
+                        <path d="M4 12l16 0" />
+                        <path d="M4 18l16 0" />
+                    </svg>
+                </label>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="/#inicio">Inicio</a></li>
+                        <li><a href="/#trabajos">Trabajos</a></li>
+                        <li><a href="/#acerca">Acerca</a></li>
+                        <li><a href="/#mision_vision">Misión y visión</a></li>
+                        <li><a href="/#contacto">Contactanos</a></li>
+                    </ul>
+                </nav>
+
+            </section>
+
+        </header>
+
+        <main class="container gallery-container">
+
+            <div class="tz-gallery">
+
+                <div class="row">
+
+                    <div class="col-sm-6 col-md-4">
+                        <a class="lightbox" href="/assets/img/grupoCrystal/1.jpeg">
+                            <img src="/assets/img/grupoCrystal/1.jpeg" alt="Sky">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <a class="lightbox" href="/assets/img/grupoCrystal/2.jpeg">
+                            <img src="/assets/img/grupoCrystal/2.jpeg" alt="Sky">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <a class="lightbox" href="/assets/img/grupoCrystal/3.jpeg">
+                            <img src="/assets/img/grupoCrystal/3.jpeg" alt="Sky">
+                        </a>
+                    </div>
+
                 </div>
 
             </div>
 
-            <div class="navigation-manual">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-            </div>
-        </div>
-    </main>
+        </main>
 
-<script>
-    let counter = 1;
-    setInterval(function() {
-        document.getElementById('radio' + counter).checked = true;
-        counter++;
-        if (counter > 3) {
-            counter = 1;
-        }
-    }, 5000)
-</script>
+        <footer class="footer blur">
+            <p><span class="col-green-100">&copy; 2024 Mateo Muñoz.</span></p>
+            <p>Todos los derechos reservados</p>
+            <a href="#contact-me">Contactame</a>
+        </footer>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.tz-gallery');
+    </script>
 </body>
 
 </html>

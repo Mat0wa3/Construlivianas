@@ -2,37 +2,9 @@
     --body-bg: #333;
 }
 
-.p-6-mw-850 {
-    padding: 6rem 2rem 0;
-    width: min(850px, 100%);
-}
-
-.col-green-100 {
-    color: #abffab;
-}
-
-.col-green-200 {
-    color: #83ff83;
-}
-
-.col-white {
-    color: #fff;
-}
-
-.border-b-2 {
-    border-bottom: 2px solid #fff;
-}
-
-.blur {
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-}
-
 /* Reseteo de los estilos */
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
     box-sizing: border-box
 }
 
@@ -54,41 +26,28 @@ body {
     display: grid;
 }
 
-img,
-picture,
-video,
-canvas {
+img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
 }
 
-input,
-button,
-textarea,
-select {
+input, button, textarea, select {
     font: inherit;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
-    margin-bottom: 1rem;
 }
 
 p {
     text-wrap: pretty;
-    color: #cacaca;
 }
 
 /* Inicio de los estilos del layout (mobile-firts) */
 
 .layout {
     display: grid;
-    /* grid-template-columns: 20rem 1fr; */
+    /*grid-template-columns: 20rem 1fr;*/
     gap: 2rem;
 }
 
@@ -96,18 +55,13 @@ p {
     position: fixed;
     width: 100%;
     z-index: 100;
-
-    svg {
-        display: block;
-        max-width: 100%;
-        height: 8dvh;
-    }
 }
 
 .header_nav {
     padding: 0 1.25rem;
     box-shadow: 0 8px 32px 0 rgba(55, 135, 31, 0.37);
-    min-height: 10dvh;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 
     display: flex;
     justify-content: space-between;
@@ -117,9 +71,9 @@ p {
 .nav {
     position: fixed;
     width: 100%;
-    height: 90dvh;
+    height: 100dvh;
     background-color: rgb(45, 109, 26);
-    top: 70px;
+    top: 80px;
     left: -100%;
 
     display: flex;
@@ -130,34 +84,19 @@ p {
 }
 
 .header_icon {
-    text-decoration: none;
-    color: #c0c0c0;
-
-    p {
-        transition: color .3s;
-    }
-
-    span {
-        color: #00c000;
-    }
-
-    img {
-        height: 10dvh;
-    }
-}
-
-.header_icon p:hover {
-    color: white;
+    display: inline-block;
+    width: 6rem;
 }
 
 .nav-list {
     margin: 0;
     padding: 0;
     list-style: none;
-    font-size: 1rem;
-
+    
     display: grid;
-    gap: 2rem;
+    gap: 3rem;
+    padding-block: 2rem;
+    font-size: 1.25rem;
 }
 
 .nav-list a {
@@ -166,8 +105,7 @@ p {
     transition: color .3s;
 }
 
-.nav-list a:hover,
-.nav-list a:active {
+.nav-list a:hover, .nav-list a:active {
     color: #fff;
 }
 
@@ -181,7 +119,7 @@ p {
     display: none;
 }
 
-#check:checked~.nav {
+#check:checked ~ .nav {
     left: 0;
 }
 
@@ -196,6 +134,8 @@ main {
 
 #inicio {
     min-height: 70dvh;
+    max-width: 850px;
+    padding: 6rem 2rem 0;
 
     display: flex;
     flex-direction: column;
@@ -204,21 +144,14 @@ main {
 }
 
 #trabajos {
+    padding: 6rem 2rem 0;
     min-height: 70dvh;
+    max-width: 850px;
 
-
+    
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-#clientes dd {
-    margin: 1rem 0 1rem 1.5rem;
-    color: #d3d3d3;
-}
-
-#clientes dt {
-    margin-top: 3rem;
 }
 
 .portfolio {
@@ -238,8 +171,7 @@ main {
     border-radius: 10px;
 }
 
-.portfolioItem:hover,
-.portfolioItem:active {
+.portfolioItem:hover, .portfolioItem:active {
     transform: translate(5px, -5px);
     box-shadow: 6px 8px 10px #000;
 }
@@ -252,85 +184,73 @@ main {
     text-shadow: 0 4px 6px #000;
 }
 
-.contact-container {
-    width: 100%;
-    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+#acerca {
+    padding: 6rem 2rem 0;
+    max-width: 850px;
 }
 
-.contact-links {
+#mision_vision {
+    padding: 6rem 2rem 0;
+    max-width: 850px;
+}
+
+#contacto {
+    padding: 6rem 2rem 0;
+
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.contact-item {
+.contacto_container {
+    width: 100%;
+    max-width: 850px;
+    gap: 3rem;
+}
+
+.contacto_contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#contacto i {
+    font-size: 30px;
+}
+
+.contact_item {
     padding: .5em;
     display: flex;
     align-items: center;
     gap: 40px;
 
-    svg {
-        display: block;
-        margin-right: 5px;
-    }
-
-    a {
-        font-size: 1rem;
+    & a {
         text-decoration: none;
         color: #c0c0c0;
         transition: color .3s;
     }
 
-    a:hover {
+    & a:hover {
         color: #fff;
     }
 }
 
-.contact-item::before {
+.contact_item::before {
     content: ' ';
     position: absolute;
     width: 2px;
-    height: 50px;
+    height: 60px;
     background-color: #fff;
     transform: translateX(45px);
 }
 
-.contact-RPG-logo {
+.contact_RPG_logo {
     max-height: 200px;
     filter: invert(100%);
 }
 
-.footer {
-    width: 90%;
-    place-self: center;
-    margin: 1rem;
-    background-color: hsla(0, 0%, 12%, .8);
-    padding-inline: 1.25rem;
-    border-radius: 5px;
-    padding: 1rem;
-    font-size: .7rem;
-    gap: 20px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    a {
-        text-decoration: none;
-        color: #fff;
-        padding: .2rem;
-        border-radius: 5px;
-        transition: background-color .3s;
-    }
-
-    a:hover {
-        background-color: hsl(0, 0%, 100%, .2);
-    }
-}
-
-@media only screen and (width >=768px) {
+@media only screen and (width >= 768px) {
 
     .checkbtn {
         display: none;
@@ -339,7 +259,7 @@ main {
     .header_nav {
         justify-content: space-between;
     }
-
+    
     .nav {
         left: 0;
         top: 0;
@@ -351,15 +271,6 @@ main {
 
     .nav-list {
         display: flex;
-    }
-
-    .contact-container {
-        flex-wrap: nowrap;
-        justify-content: space-between;
-    }
-
-    .footer {
-        font-size: 1rem;
     }
 
 }
